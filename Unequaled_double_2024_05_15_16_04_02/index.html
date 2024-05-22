@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive p5.js Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="about-link">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="canvas-container"></div>
+    <li><a href="https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI">Go to GitHub</a></li>
+    <section id="about-section">
+      <h1>About</h1>
+      <div class="content">
+        <p>This is an example of a responsive homepage using p5.js.</p>
+        <p>ChatGPT is a large language model capable of generating human-like text based on the input it receives. It can be used for various natural language processing tasks such as chatbots, text generation, and more.</p>
+        <p>This webpage showcases the use of p5.js for creative coding and includes interactive elements along with explanations about ChatGPT and web development.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec ligula vitae lectus fringilla dictum. Nullam ac enim ac dui vehicula tempor. Aliquam convallis nisi nec luctus vehicula. Nullam vel aliquet arcu. Duis ultrices suscipit urna, ac condimentum metus scelerisque ac. In vel dui ut libero auctor mattis. Integer nec posuere neque. Fusce vel leo ac purus laoreet feugiat nec sit amet turpis. Nam tristique, neque a lobortis aliquet, augue ipsum egestas sapien, at vestibulum eros justo at velit.</p>
+        <p>Praesent nec fermentum nulla, a pellentesque ligula. Vestibulum varius ante vel dui commodo vestibulum. Phasellus tincidunt justo eget gravida egestas. Curabitur ac libero tortor. Suspendisse eget lacus ac est placerat interdum eu vitae dui. Cras in dictum justo, sed varius nunc. Maecenas bibendum efficitur purus, et fermentum eros facilisis a. Proin suscipit dui sit amet ante consectetur, non consequat nulla bibendum.</p>
+        <p>Sed sit amet aliquet quam. Vestibulum condimentum semper sapien, et rutrum ex pellentesque ut. Maecenas varius, nulla non condimentum vulputate, justo metus lobortis ante, nec auctor nunc libero non ipsum. Phasellus vehicula a arcu sed suscipit. Proin eget sollicitudin lacus, non ullamcorper sem. Donec et magna ipsum. Curabitur at rhoncus nunc. Sed elementum tortor nec magna tincidunt rutrum. Integer id ipsum nulla. Mauris vehicula arcu nec turpis lacinia, nec congue libero rhoncus. Pellentesque ut tortor id felis ultricies tincidunt. Curabitur dapibus, purus vitae aliquam consequat, est eros aliquet nisi, nec convallis tortor risus nec metus. Cras sed justo purus.</p>
+        <p>Mauris interdum, ex ut convallis condimentum, purus magna fermentum leo, a luctus felis lacus sed nisl. Duis quis semper lorem. Sed consequat vel ligula id mattis. Ut nec lacus ut nunc blandit pretium. Fusce non leo et elit varius vehicula. Donec id mauris volutpat, elementum leo et, vulputate enim. Integer ut risus rhoncus, condimentum metus ut, mollis neque. Mauris vel felis fermentum, bibendum tellus non, auctor risus. Vestibulum rhoncus justo eu mi dapibus, eget scelerisque enim malesuada. Donec sit amet libero sit amet felis faucibus suscipit. Ut rhoncus libero id bibendum luctus. Sed et tortor nisi. Vestibulum in nunc eu lorem sollicitudin vulputate.</p>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+  <script>
+    document.getElementById("about-link").addEventListener("click", function(event){
+      event.preventDefault(); // 링크 기본 동작 방지
+      scrollToAbout(); // about 섹션으로 스크롤
+    });
+
+    function scrollToAbout() {
+      const aboutSection = document.getElementById('about-section');
+      const sectionPosition = aboutSection.offsetTop; // about 섹션의 위치
+
+      // 스크롤 애니메이션
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
